@@ -25,8 +25,8 @@ const ExpenseForm = (props: IExpensesFormProps) => {
     setEnteredTitle(e.currentTarget.value);
   };
 
-  const amountChangeHandler = (e: any) => {
-    setEnteredAmount(e.currentTarget.value);
+  const amountChangeHandler = (e: FormEvent<HTMLInputElement>) => {
+    setEnteredAmount(+e.currentTarget.value);
   };
 
   const dateChangeHandler = (e: FormEvent<HTMLInputElement>) => {
